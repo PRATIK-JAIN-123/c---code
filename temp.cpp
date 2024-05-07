@@ -1,30 +1,58 @@
-#include <stdio.h>
-
-int main() {
-    // Write C code here
-    int a[50],n,i,j,b,target,index[2];
-    printf("enter the size of the array:");
-    scanf("%d",&n);
-    printf("enter the elements of array:");
-    for(i=0;i<n;i++){
-        scanf("%d",&a[i]);
-    }
-    printf("enter the target number : ");
-    scanf("%d",&target);
-    for(i=0;i<n;i++){
-        for(j=0;j<n;j++){
-            if((a[i]+a[j])==target && i!=j){
-                index[0]=i;
-                index[1]=j;
-                printf("%d\t",index[0]);
-                printf("%d\t",index[1]);
-                break;
-            }
-        }
-    }
-    printf("the indexes are:\n");
-    for(i=0;i<2;i++){
-        printf("%d\t",index[i]);
-    }
-    return 0;
+#include <iostream>
+int main(){
+	// Write your code here.
+	// Christmas tree
+	/*int spaces=5-1;
+	int stars=1;
+	for(int i=1;i<=5;i++){
+		for(int k=1;k<=spaces;k++){
+			std::cout<<" ";
+		}
+		for(int j=1;j<=stars;j++){
+				std::cout<<"*";
+		}
+        std::cout<<std::endl;
+		spaces-=1;
+		stars+=2;
+	}*/
+	//binary triangle
+	/*for(int i=0;i<5;i++){
+		for(int j=1;j<=i+1;j++){
+		   std::cout<<(i+j)%2<<" ";
+		}
+		std::cout<<std::endl;
+	}*/
+	//Symetric pattern
+	/*int spaces=0;
+	for(int i=0;i<3;i++){
+		for(int j=3;j>i;j--){
+			std::cout<<"*";
+		}
+		for(int k=0;k<spaces;k++){
+			std::cout<<" ";
+		}
+		for(int l=3;l>i;l--){
+			std::cout<<"*";
+		}
+		spaces+=2;
+		std::cout<<std::endl;
+	}*/
+	// Hollow Rectangle
+	/*for(int i=1;i<=5;i++){
+		for(int j=1;j<=5;j++){
+			if(i==1 || i==5 || j==1 || j==5)
+			std::cout<<"* ";
+			else
+			std::cout<<"  ";
+		}
+		std::cout<<std::endl;
+	}*/
+	/*int n=5;
+	int count=(n*(n+1))/2;
+	for(int i=1;i<=n;i++){
+		for(int j=n;j>=i;j--){
+			std::cout<<count--<<" ";
+		}
+		std::cout<<std::endl;
+	}*/
 }
