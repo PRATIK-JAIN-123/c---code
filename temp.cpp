@@ -24,14 +24,14 @@ int main(){
 	}*/
 	//Symetric pattern
 	/*int spaces=0;
-	for(int i=0;i<3;i++){
-		for(int j=3;j>i;j--){
+	for(int i=0;i<5;i++){
+		for(int j=5;j>i;j--){
 			std::cout<<"*";
 		}
 		for(int k=0;k<spaces;k++){
 			std::cout<<" ";
 		}
-		for(int l=3;l>i;l--){
+		for(int l=5;l>i;l--){
 			std::cout<<"*";
 		}
 		spaces+=2;
