@@ -1,68 +1,36 @@
-/*#include<iostream>
+// Online C++ compiler to run C++ program online
+#include <iostream>
 using namespace std;
- class shop{
-    int id[100];
-    int price[100];
-    public:
-    int i;
-    int counter=0;//if it is in private then we have to write the funtion to access that variable
-    void initid(void){
-        counter =0;
+int main() {
+    // Write C++ code here
+    using namespace std;
+    int i,j,k,a[10][10],n,m;
+    cout<<"enter the size of 2d array"<<endl;
+    cin>>n;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            cin>>a[i][j];
+        }
+        cout<<endl;
     }
-    void setprice(void);
-    void display(void);
- };
-
- void shop::setprice(void){
-    cout<<"enter the item id " <<counter+1<<endl;
-    cin>>id[counter];
-    cout<<"enter the price of an item"<<endl;
-    cin>>price[counter];
-    counter++;
- }
- void shop:: display(void){
-    for(i=0;i<counter;i++){
-        cout<<"the price of item "<<id[i]<<" is "<<price[i]<<endl;
+    int ans=1;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+           for(k=0;k<n;k++){
+               if(j!=k){
+               if(a[i][j]==a[i][k]){
+                   ans=0;
+                   cout<<a[i][j]<<" and "<< a[i][k]<<" in row "<<i+1<<" "<<endl;
+                   exit(0);
+               }
+               }
+           }
+        }
+            
     }
- }
-
- int main(){
-    shop a;
-    //a.initid();
-    a.setprice();
-    a.setprice();
-    a.setprice();
-    a.display();
- }*/
- #include<iostream>
-using namespace std;
-class shop{
-    int price[100];
-    int id[100];
-    public:
-    int counter=0;
-    void setprice(void);
-    void getdata(void);
-};
-
-void shop::setprice(void){
-    cout<<"the customer id is " << counter+1<<endl;
-    cin>>id[counter];
-    cout<<"the price of the object is "<<endl;
-    cin>>price[counter];
-    counter++;
-}
-void shop:: getdata(void){
-    for(int i=0;i<counter;i++){
-        cout<<"the customer id is "<<id[i]<<" and the price is "<<price[i]<<endl;
+    if(ans){
+        cout<<"its right "<<" ";
     }
-}
-
-int main(){
-    shop a;
-    a.setprice();
-    a.setprice();
-    a.setprice();
-    a.getdata();
-    return 0;
+    else 
+    cout<<"wrong"<<" ";
 }
